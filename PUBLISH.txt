@@ -1,1 +1,1 @@
-Remove devDependencies and scripts from package.json before running npm publish.
+Remove devDependencies, scripts, and engines from package.json before running npm publish.
