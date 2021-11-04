@@ -1,1 +1,4 @@
-Remove devDependencies, scripts, and engines from package.json before running npm publish.
+1. npm i --legacy-peer-deps
+2. npm run prepare-release
+4. Increase version
+5. npm publish.
