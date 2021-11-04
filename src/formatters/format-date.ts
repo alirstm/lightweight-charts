@@ -14,6 +14,10 @@ const yy = (date: Date) => numToStr(getYear(date) % 100, 2);
 const yyyy = (date: Date) => numToStr(getYear(date), 4);
 
 export function formatDate(date: Date, format: string, locale: string): string {
+	if(typeof format === 'function') {
+		// @ts-ignore
+		return format(date);
+	}
 	return format
 		.replace(/yyyy/g, yyyy(date))
 		.replace(/yy/g, yy(date))
